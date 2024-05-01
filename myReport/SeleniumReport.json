@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-05-01T15:27:07.603Z",
+    "end": "2024-05-01T15:27:12.558Z",
+    "duration": 4955,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "10d6e9aa-8dc2-461a-981d-74059d19567c",
+      "title": "",
+      "fullFile": "T:\\AutomationTesing\\droppii-automation-assignment\\testcases\\test.js",
+      "file": "\\testcases\\test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d75f00cd-2ecd-4c5d-90a5-a024df6ea754",
+          "title": "Register",
+          "fullFile": "T:\\AutomationTesing\\droppii-automation-assignment\\testcases\\test.js",
+          "file": "\\testcases\\test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: Open Homepage in \"Register\"",
+              "fullTitle": "Register \"before all\" hook: Open Homepage in \"Register\"",
+              "timedOut": false,
+              "duration": 668,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await baseTest.openHomePage();\nhomepage.constructorDriver(driver);",
+              "err": {},
+              "uuid": "011685f5-cbb8-4e3a-9976-2711e1901d49",
+              "parentUUID": "d75f00cd-2ecd-4c5d-90a5-a024df6ea754",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: Close browser in \"Register\"",
+              "fullTitle": "Register \"after all\" hook: Close browser in \"Register\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "baseTest.closeBrowser();",
+              "err": {},
+              "uuid": "7ff0b686-12fe-4ef6-b7d2-cad43a4c586b",
+              "parentUUID": "d75f00cd-2ecd-4c5d-90a5-a024df6ea754",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"Register\"",
+              "fullTitle": "Register \"after each\" hook in \"Register\"",
+              "timedOut": false,
+              "duration": 2,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "baseTest.takeScreenshotAfterTest(this.currentTest.state, this.currentTest.title, this)\n// if(this.currentTest.state == 'passed'){\n//     logger.info(\"-------------------PASSED-----------------\");\n// }\n// if(this.currentTest.state == 'failed'){\n//     logger.info(\"-------------------FAILED-----------------\");\n//     let imageFileName = this.currentTest.title + '.jpeg';\n//     driver.takeScreenshot().then(\n//         function(image){\n//             require('fs').writeFileSync('./screenshots/' + imageFileName, image, 'base64')\n//         }\n//     )\n//     addContext(this,'Following comes the failed test image')\n//     addContext(this, '../screenshots/' + imageFileName)\n// }",
+              "err": {},
+              "uuid": "efac59c8-b6e3-4add-95e8-483d0b8ada11",
+              "parentUUID": "d75f00cd-2ecd-4c5d-90a5-a024df6ea754",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC01 Register with empty value",
+              "fullTitle": "Register TC01 Register with empty value",
+              "timedOut": false,
+              "duration": 4256,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"Following comes the failed test image\",\n  \"..\\\\screenshots\\\\TC01 Register with empty value.jpeg\"\n]",
+              "code": "logger.info(\"=========================\")\nawait driver.sleep(2000)\nawait homepage.verifyHomepageLogoIsDisplayed();",
+              "err": {
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//header[@class='page-header']//div[contains(@class,'content')]//a[@class='log']\"}\n  (Session info: chrome=124.0.6367.92)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//header[@class='page-header']//div[contains(@class,'content')]//a[@class='log']\"}\n  (Session info: chrome=124.0.6367.92)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:521:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:514:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:446:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:740:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:146:15)\n    at async T:\\AutomationTesing\\droppii-automation-assignment\\node_modules\\selenium-webdriver\\lib\\webdriver.js:192:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:186:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:191:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:738:22)\n    at async HomePage.verifyHomepageLogoIsDisplayed (actions\\pageObjects\\HomePage.js:21:36)\n    at async Context.<anonymous> (testcases\\test.js:23:9)",
+                "diff": null
+              },
+              "uuid": "4af9d969-3e35-40e0-9e42-a9c489c5dd13",
+              "parentUUID": "d75f00cd-2ecd-4c5d-90a5-a024df6ea754",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4af9d969-3e35-40e0-9e42-a9c489c5dd13"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4256,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "SeleniumReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./myReport",
+        "reportFilename": "SeleniumReport"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

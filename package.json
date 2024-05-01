@@ -1,0 +1,18 @@
+{
+  "name": "droppii-automation-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./testcases/test.js --no-timeouts --reporter mochawesome --reporter-options  reportDir=./myReport,reportFilename=SeleniumReport "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "log4js": "^6.9.1",
+    "mocha": "^10.4.0",
+    "mochawesome": "^7.1.3",
+    "selenium-webdriver": "^4.20.0"
+  }
+}
