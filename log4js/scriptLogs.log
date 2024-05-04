@@ -1,76 +1,40 @@
-[2024-05-01T21:21:26.518] [INFO] default - =========================
-[2024-05-01T21:21:49.167] [INFO] default - =========================
-[2024-05-01T21:29:28.665] [INFO] default - =========================
-[2024-05-01T21:30:52.927] [INFO] default - =========================
-[2024-05-01T21:32:15.925] [INFO] default - =========================
-[2024-05-01T21:38:28.443] [INFO] default - =========================
-[2024-05-01T21:39:07.851] [INFO] default - =========================
-[2024-05-01T21:39:11.069] [INFO] default - -------------------PASSED-----------------
-[2024-05-01T21:39:26.996] [INFO] default - =========================
-[2024-05-01T21:39:45.195] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:41:16.781] [INFO] default - =========================
-[2024-05-01T21:41:35.432] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:42:16.674] [INFO] default - =========================
-[2024-05-01T21:42:34.784] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:45:58.614] [INFO] default - =========================
-[2024-05-01T21:46:16.687] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:47:42.930] [INFO] default - =========================
-[2024-05-01T21:47:46.918] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:50:34.651] [INFO] default - =========================
-[2024-05-01T21:50:38.395] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:51:35.672] [INFO] default - =========================
-[2024-05-01T21:51:40.352] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:52:15.485] [INFO] default - =========================
-[2024-05-01T21:52:19.293] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:53:11.389] [INFO] default - =========================
-[2024-05-01T21:53:15.771] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:53:36.235] [INFO] default - =========================
-[2024-05-01T21:53:40.437] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:54:53.161] [INFO] default - =========================
-[2024-05-01T21:54:57.069] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:55:56.442] [INFO] default - =========================
-[2024-05-01T21:56:00.294] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:56:48.758] [INFO] default - =========================
-[2024-05-01T21:56:52.927] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:57:39.414] [INFO] default - =========================
-[2024-05-01T21:57:43.266] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T21:59:32.738] [INFO] default - =========================
-[2024-05-01T21:59:37.254] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:00:10.465] [INFO] default - =========================
-[2024-05-01T22:00:15.210] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:01:05.854] [INFO] default - =========================
-[2024-05-01T22:01:09.913] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:03:40.023] [INFO] default - =========================
-[2024-05-01T22:03:44.822] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:05:00.493] [INFO] default - =========================
-[2024-05-01T22:05:04.532] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:06:43.482] [INFO] default - =========================
-[2024-05-01T22:06:47.948] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:07:26.450] [INFO] default - =========================
-[2024-05-01T22:07:30.588] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:07:52.087] [INFO] default - =========================
-[2024-05-01T22:07:55.983] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:13:16.745] [INFO] default - =========================
-[2024-05-01T22:13:20.605] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:13:46.686] [INFO] default - =========================
-[2024-05-01T22:13:50.778] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:14:30.366] [INFO] default - =========================
-[2024-05-01T22:14:33.870] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:16:11.668] [INFO] default - =========================
-[2024-05-01T22:16:15.780] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:16:36.661] [INFO] default - =========================
-[2024-05-01T22:16:41.127] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:17:32.301] [INFO] default - =========================
-[2024-05-01T22:17:36.846] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:18:00.532] [INFO] default - =========================
-[2024-05-01T22:18:03.877] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:18:28.588] [INFO] default - =========================
-[2024-05-01T22:18:32.651] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:18:50.364] [INFO] default - =========================
-[2024-05-01T22:18:54.723] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:19:11.488] [INFO] default - =========================
-[2024-05-01T22:19:15.962] [INFO] default - -------------------FAILED-----------------
-[2024-05-01T22:21:22.122] [INFO] default - =========================
-[2024-05-01T22:21:50.581] [INFO] default - =========================
-[2024-05-01T22:23:29.133] [INFO] default - =========================
-[2024-05-01T22:27:08.289] [INFO] default - =========================
+[2024-05-04T19:23:59.908] [INFO] default - Pre-Condition - 01: Open homepage
+[2024-05-04T19:24:00.478] [INFO] default - Wait for element is displayed: //header[@class='page-header']//div[contains(@class,'content')]//a[@class='logo']
+[2024-05-04T19:24:04.142] [INFO] default - //header[@class='page-header']//div[contains(@class,'content')]//a[@class='logo'] is displayed 
+[2024-05-04T19:24:04.143] [INFO] default - Pre-Condition - 02: Create an new account
+[2024-05-04T19:24:04.157] [INFO] default - Click on element xpath: //header[@class='page-header']//a[contains(text(),'Create an Account')]
+[2024-05-04T19:24:05.820] [INFO] default - Wait for element is displayed: //h1[@class='page-title']//span[text()='Create New Customer Account']
+[2024-05-04T19:24:05.882] [INFO] default - //h1[@class='page-title']//span[text()='Create New Customer Account'] is displayed 
+[2024-05-04T19:24:05.884] [INFO] default - I input value: Thu into textbox: First Name
+[2024-05-04T19:24:05.996] [INFO] default - I input value: Tran into textbox: Last Name
+[2024-05-04T19:24:06.068] [INFO] default - I input value: Thutran8976@gmail.com into textbox: Email
+[2024-05-04T19:24:06.152] [INFO] default - I input value: Abcd@12345 into textbox: Password
+[2024-05-04T19:24:06.257] [INFO] default - I input value: Abcd@12345 into textbox: Confirm Password
+[2024-05-04T19:24:06.351] [INFO] default - Click on element xpath: //form[@id='form-validate']//button[contains(@class,'submit')]
+[2024-05-04T19:24:11.025] [INFO] default - Wait for element is displayed: //h1[@class='page-title']//span[text()='My Account']
+[2024-05-04T19:24:11.043] [INFO] default - //h1[@class='page-title']//span[text()='My Account'] is displayed 
+[2024-05-04T19:24:11.044] [INFO] default - Wait for element is displayed: //div[@class='page messages']//div[text()='Thank you for registering with Main Website Store.']
+[2024-05-04T19:24:11.059] [INFO] default - //div[@class='page messages']//div[text()='Thank you for registering with Main Website Store.'] is displayed 
+[2024-05-04T19:24:11.059] [INFO] default - Pre-Condition - 03: Sign out and back to home page
+[2024-05-04T19:24:11.749] [INFO] default - Expected text: Welcome, Thu Tran! Actual text: Welcome, Thu Tran!
+[2024-05-04T19:24:11.766] [INFO] default - Click on element xpath: //div[@class='panel header']//span[@class='customer-name']//button[contains(@class,'switch')]
+[2024-05-04T19:24:11.812] [INFO] default - Wait for element is displayed: //div[@class='panel header']//div[@class='customer-menu']//ul[@class='header links']
+[2024-05-04T19:24:11.834] [INFO] default - //div[@class='panel header']//div[@class='customer-menu']//ul[@class='header links'] is displayed 
+[2024-05-04T19:24:11.835] [INFO] default - Wait for element is displayed: //div[@class='panel header']//div[@class='customer-menu']//ul[@class='header links']//a[contains(text(),'Sign Out')]
+[2024-05-04T19:24:11.858] [INFO] default - //div[@class='panel header']//div[@class='customer-menu']//ul[@class='header links']//a[contains(text(),'Sign Out')] is displayed 
+[2024-05-04T19:24:11.880] [INFO] default - Click on element xpath: //div[@class='panel header']//div[@class='customer-menu']//ul[@class='header links']//a[contains(text(),'Sign Out')]
+[2024-05-04T19:24:14.268] [INFO] default - Wait for element is displayed: //h1[@class='page-title']//span[text()='You are signed out']
+[2024-05-04T19:24:14.286] [INFO] default - //h1[@class='page-title']//span[text()='You are signed out'] is displayed 
+[2024-05-04T19:24:14.288] [INFO] default - Sign In - Step 01: Click on Sign In link
+[2024-05-04T19:24:14.296] [INFO] default - Click on element xpath: //header[@class='page-header']//a[contains(text(),'Sign In')]
+[2024-05-04T19:24:15.478] [INFO] default - Sign In - Step 02: Verify Customer Login displayed
+[2024-05-04T19:24:15.478] [INFO] default - Wait for element is displayed: //h1[@class='page-title']//span[text()='Customer Login']
+[2024-05-04T19:24:15.496] [INFO] default - //h1[@class='page-title']//span[text()='Customer Login'] is displayed 
+[2024-05-04T19:24:15.497] [INFO] default - Sign In - Step 03: Input value into email textbox
+[2024-05-04T19:24:15.497] [INFO] default - I input value: Thutran8976@gmail.com into textbox: Email
+[2024-05-04T19:24:15.607] [INFO] default - Sign In - Step 04: Input value into password textbox
+[2024-05-04T19:24:15.608] [INFO] default - I input value: Abcd@12345 into textbox: Password
+[2024-05-04T19:24:15.692] [INFO] default - Sign In - Step 05: Click on Sign in button
+[2024-05-04T19:24:15.701] [INFO] default - Click on element xpath: //form[@id='login-form']//button[contains(@class,'login') and contains(@class,'primary')]
+[2024-05-04T19:24:17.730] [INFO] default - Sign In - Step 06: Verify login successfullys
+[2024-05-04T19:24:19.303] [INFO] default - Expected text: Welcome, Thu Tran! Actual text: Welcome, Thu Tran!

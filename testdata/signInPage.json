@@ -1,0 +1,8 @@
+{
+    "signInForm":{
+        "textboxLabel" : {
+            "email" : "Email",
+            "password": "Password"
+        }
+    }
+}

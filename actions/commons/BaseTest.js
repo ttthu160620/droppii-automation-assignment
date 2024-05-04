@@ -3,6 +3,7 @@ require("selenium-webdriver/chrome")
 const logger = require("../../log4js/log4jsConfig");
 var addContext = require("mochawesome/addContext");
 let path = require("path")
+let fs = require("fs")
 
 const webURL = "https://magento.softwaretestingboard.com/"
 class BaseTest {
@@ -14,45 +15,28 @@ class BaseTest {
     }
 
     openHomePage() {
-        this.driver.manage().setTimeouts({ implicit: 1000 });
+        this.driver.manage().setTimeouts({ implicit: 15000 });
         this.driver.manage().window().maximize();
         this.driver.get(webURL);
         return this.driver;
     }
 
-    closeBrowser() {
-        this.driver.quit();
+    async closeBrowser() {
+        await this.driver.quit();
     }
 
-    // takeScreenshotAfterTest(status, fileTitle, testcase){
-    //     if(status == 'passed'){
-    //         logger.info("-------------------PASSED-----------------");
-    //     }
-    //     if(status == 'failed'){
-    //         logger.info("-------------------FAILED-----------------");
-    //         let imageFileName = fileTitle + '.jpeg';
-    //         this.driver.takeScreenshot().then(
-    //             function(image){
-    //                 require('fs').writeFileSync(path.join(__dirname, '.', 'screenshots', imageFileName), image, 'base64')
-    //             }
-    //         )
-    //         addContext(testcase,'Following comes the failed test image')
-    //         addContext(testcase, '../screenshots/' + imageFileName)
-    //     }
-    // }
-
-    takeScreenshotAfterTest(status, fileTitle, testcase) {
+    takeScreenshotAfterTest(status, fileTitle, currentObject) {
         if (status === 'failed') {
             console.log("-------------------FAILED-----------------");
             const imageFileName = fileTitle + '.jpeg';
             this.driver.takeScreenshot().then(
                 function(image) {
-                    const screenshotsDir = path.join(__dirname, '..', '..', 'screenshots');
+                    const screenshotsDir = path.join(__dirname, '..', '..', 'screenshots/');
                     fs.writeFileSync(path.join(screenshotsDir, imageFileName), image, 'base64');
                 }
             );
-            addContext(testcase, 'Following comes the failed test image');
-            addContext(testcase, path.join('..', 'screenshots', imageFileName));
+            addContext (currentObject, 'Following comes the failed test image');
+            addContext (currentObject, path.join('..', 'screenshots/', imageFileName));
         }
     }
 }

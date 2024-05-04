@@ -1,0 +1,9 @@
+{
+    "textboxLabel" : {
+        "firstNameLabel" : "First Name",
+        "lastNameLabel" : "Last Name",
+        "emailLabel" : "Email",
+        "passwordLabel" : "Password",
+        "confirmPassword" : "Confirm Password"
+    }
+}

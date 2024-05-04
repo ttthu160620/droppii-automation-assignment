@@ -1,0 +1,8 @@
+{
+    "pageHeader": {
+        "createNewCustomerAccount": "Create New Customer Account",
+        "customerLogin": "Customer Login",
+        "myAccount": "My Account",
+        "youAreSignedOut": "You are signed out"
+    }
+}

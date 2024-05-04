@@ -1,40 +1,9 @@
 const { By, until } = require("selenium-webdriver");
 const logger = require("../../log4js/log4jsConfig");
 const LONG_TIMEOUT = 15000;
+const SHORT_TIMEOUT = 5000;
 
 class PageBase {
-
-	openPageUrl(driver, pageUrl) {
-		driver.get(pageUrl);
-	}
-
-	refreshPage(driver) {
-		driver.navigate().refresh();
-	}
-
-	waitForAlertPresence(driver) {
-		return driver.wait(until.alertIsPresent(), LONG_TIMEOUT);
-	}
-
-	acceptAlert(driver) {
-		let alert = this.waitForAlertPresence(driver);
-		alert.accept();
-	}
-
-	cancelAlert(driver) {
-		let alert = this.waitForAlertPresence(driver);
-		alert.dismiss();
-	}
-
-	getAlertText(driver) {
-		let alert = this.waitForAlertPresence(driver);
-		return alert.getText();
-	}
-
-	senkeyAlert(driver, textValue) {
-		let alert = this.waitForAlertPresence(driver);
-		alert.sendKeys(textValue);
-	}
 
 	getByXpath(xpathLocator) {
 		return By.xpath(xpathLocator);
@@ -44,34 +13,27 @@ class PageBase {
 		return driver.findElement(this.getByXpath(xpathLocator));
 	}
 
-	getListWebElements(driver, xpathLocator) {
-		return driver.findElements(this.getByXpath(xpathLocator));
+	async getListWebElements(driver, xpathLocator) {
+		return await driver.findElements(this.getByXpath(xpathLocator));
 	}
 
-	getListElementsSize(driver, xpathLocator) {
-		return this.getListWebElements(driver, xpathLocator).size();
+	async getListElementsSize(driver, xpathLocator) {
+		return await this.getListWebElements(driver, xpathLocator).size();
 	}
 
-	sendKeyTextbox(driver, xpathLocator, textValue) {
-		let element = this.getWebElement(driver, xpathLocator);
-		element.clear();
-		element.sendKeys(textValue);
+	async sendKeyTextbox(driver, xpathLocator, textValue) {
+		let element = await this.getWebElement(driver, xpathLocator);
+		await element.clear();
+		await element.sendKeys(textValue);
 	}
 
-	clickToElement(driver, xpathLocator) {
-		this.getWebElement(driver, xpathLocator).click();
-	}
-
-	clickToElementByJS(driver, xpathLocator) {
-		driver.executeScript("arguments[0].click();", this.getWebElement(driver, xpathLocator));
+	async clickToElement(driver, xpathLocator) {
+		logger.info("Click on element xpath: " + xpathLocator);
+		await this.getWebElement(driver, xpathLocator).click();
 	}
 
 	getElementText(driver, xpathLocator) {
 		return this.getWebElement(driver, xpathLocator).getText();
-	}
-
-	getElementAttributeValue(driver, xpathLocator, attributeName) {
-		return this.getWebElement(driver, xpathLocator).getAttribute(attributeName);
 	}
 
 	getRandomNumber(max) {
@@ -84,45 +46,29 @@ class PageBase {
 		actions.move({ duration: 3000, origin: element, x: 0, y: 0 }).perform();
 	}
 
-	getElementValidationMessage(driver, xpathLocator) {
-		return driver.executeScript("return arguments[0].validationMessage;", this.getWebElement(xpathLocator));
+	async isElementDisplayed(driver, xpathLocator) {
+		return await this.getWebElement(driver, xpathLocator).isDisplayed();
 	}
 
-	isElementDisplayed(driver, xpathLocator) {
-		return this.getWebElement(driver, xpathLocator).isDisplayed();
+	async isElementSelected(driver, xpathLocator) {
+		return await this.getWebElement(driver, xpathLocator).isSelected();
 	}
 
-	isElementSelected(driver, xpathLocator) {
-		return this.getWebElement(driver, xpathLocator).isSelected();
-	}
-
-	isElementEnabled(driver, xpathLocator) {
-		return this.getWebElement(driver, xpathLocator).isEnabled();
-	}
-
-	checkToDefaultCheckboxRadio(driver, xpathLocator) {
-		let element = this.getWebElement(driver, xpathLocator);
-		if (!element.isSelected()) {
-			element.click();
-		}
+	async isElementEnabled(driver, xpathLocator) {
+		return await this.getWebElement(driver, xpathLocator).isEnabled();
 	}
 
 	scrollToViewByJS(driver, xpathLocator) {
 		driver.executeScript("arguments[0].scrollIntoView(true);", xpathLocator);
 	}
 
-	waitForElementClickable(driver, xpathLocator) {
-		driver.wait(until.elementLocated(this.getByXpath(xpathLocator)), LONG_TIMEOUT);
+	async waitForElementClickable(driver, xpathLocator) {
+		await driver.wait(until.elementLocated(this.getByXpath(xpathLocator)), LONG_TIMEOUT);
 	}
 
-	waitForElementVisible(driver, xpathLocator) {
-		let element = this.getWebElement(driver, xpathLocator);
+	async waitForElementVisible(driver, xpathLocator) {
+		let element = await this.getWebElement(driver, xpathLocator);
 		driver.wait(until.elementIsVisible(element), LONG_TIMEOUT);
-	}
-
-	getCurrentDate() {
-		var today = new Date();
-		return today.getDate() + '/' + (today.getMonth() + 1) + '/' + (today.getYear() + 1900);
 	}
 
 	getDynamicLocator(str, ...arr) {
@@ -132,30 +78,81 @@ class PageBase {
 		return str;
 	}
 
-	async waitUntilElementIsDisplayed(driver, elementXpath, elementName) {
-		logger.info("Wait for element displayed: " + elementName);
-		await driver.manage().setTimeouts({ implicit: 0 });
+	overrideImplicitTimeOut(driver, timeout) {
+		driver.manage().setTimeouts({ implicit: timeout });
+	}
+
+	async waitUntilElementIsDisplayed(driver, xpathLocator) {
+		logger.info("Wait for element is displayed: " + xpathLocator);
+		this.overrideImplicitTimeOut(driver, 0);
+		
 		try {
-			await driver.wait(async function () {
+			await driver.wait(async () => {
 				try {
-					let ele = this.getWebElement(driver, xpathLocator);
-					if (await ele.isDisplayed()) {
-						logger.info(elementXpath + " is displayed ");
+					if (await this.isElementDisplayed(driver, xpathLocator)) {
+						logger.info(xpathLocator + " is displayed ");
 						return true;
 					} else {
-						logger.info(elementXpath + " is Not displayed ");
+						logger.info(xpathLocator + " is not displayed ");
 						return false;
 					}
 				} catch (e) {
-					logger.info("Does not displayed element: " + elementXpath);
+					logger.info(e.message);
+					logger.info("Does not displayed element: " + xpathLocator);
 					return false;
 				}
 			}, LONG_TIMEOUT);
-			await driver.manage().setTimeouts({ implicit: LONG_TIMEOUT });
+			this.overrideImplicitTimeOut(driver, LONG_TIMEOUT);
+			return true;
+		
+		} catch (e) {
+			logger.info(e.message);
+			this.overrideImplicitTimeOut(driver, LONG_TIMEOUT);
+			return false;
+		}
+	}
+
+
+	async waitUntilElementIsNotDisplayed(driver, xpathLocator) {
+		logger.info("Wait for element is not displayed: " + xpathLocator);
+		this.overrideImplicitTimeOut(driver, 0);
+		try {
+			await driver.wait(async () => {
+				try {
+					if (await this.isElementDisplayed(driver, xpathLocator)) {
+						logger.info(xpathLocator + " is displayed");
+						return false;
+					} else {
+						logger.info(xpathLocator + " is not displayed");
+						return true;
+					}
+				} catch (e) {
+					logger.info(e.message);
+					logger.info("Does not displayed element: " + xpathLocator);
+					return true;
+				}
+			}, LONG_TIMEOUT);
+			this.overrideImplicitTimeOut(driver, LONG_TIMEOUT);
 			return true;
 		} catch (e) {
 			logger.info(e.message);
-			await driver.manage().setTimeouts({ implicit: LONG_TIMEOUT });
+			this.overrideImplicitTimeOut(driver, LONG_TIMEOUT);
+			return false;
+		}
+	}
+
+	async isElementUndisplayed(driver, xpathLocator) {
+		this.overrideImplicitTimeOut(driver, SHORT_TIMEOUT);
+		const listElement = await this.getListWebElements(driver, xpathLocator);
+		this.overrideImplicitTimeOut(driver, LONG_TIMEOUT);
+		if (listElement.length == 0) {
+			logger.info("Element not in DOM");
+			return true;
+		} else if (listElement.length > 0 && !listElement[0].isDisplayed()) {
+			logger.info("Element in DOM but undisplay");
+			return true;
+		} else {
+			logger.info("Element in DOM and display");
 			return false;
 		}
 	}

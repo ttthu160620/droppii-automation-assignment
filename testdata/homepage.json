@@ -1,0 +1,11 @@
+{
+    "headerPage" : {
+        "signInLink" : "Sign In",
+        "signUpLink" : "Create an Account"
+    },
+    "customerMenu":{
+        "myAccountOption" : "My Account",
+        "myWishListOption" : "My Wish List",
+        "signOutOption" : "Sign Out"
+    }
+}

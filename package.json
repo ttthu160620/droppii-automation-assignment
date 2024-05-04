@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./testcases/test.js --no-timeouts --reporter mochawesome --reporter-options  reportDir=./myReport,reportFilename=SeleniumReport "
+    "test": "mocha ./testcases/signInPage/SignIn.js --no-timeouts --reporter mochawesome --reporter-options  reportDir=./myReport,reportFilename=SeleniumReport "
   },
   "author": "",
   "license": "ISC",
